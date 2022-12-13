@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/linkx/static/css/main.c9e5115f.css",
+    "main.js": "/linkx/static/js/main.cf0a6911.js",
+    "static/js/787.7a89f5dd.chunk.js": "/linkx/static/js/787.7a89f5dd.chunk.js",
+    "static/media/Boydsuit.jpeg": "/linkx/static/media/Boydsuit.da3eceda8e34f7bf1888.jpeg",
+    "index.html": "/linkx/index.html",
+    "main.c9e5115f.css.map": "/linkx/static/css/main.c9e5115f.css.map",
+    "main.cf0a6911.js.map": "/linkx/static/js/main.cf0a6911.js.map",
+    "787.7a89f5dd.chunk.js.map": "/linkx/static/js/787.7a89f5dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9e5115f.css",
+    "static/js/main.cf0a6911.js"
+  ]
+}
