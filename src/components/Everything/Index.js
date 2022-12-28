@@ -21,7 +21,7 @@ function Everything() {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div class="flex flex-col mx-auto md:container md:mx-auto sm:mx-8 rounded-xl p-1 m-4 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-900 w-11/12">
+    <div class="flex flex-col mx-auto md:container md:mx-auto sm:mx-8 rounded-xl p-5 m-4 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-900 w-11/12">
       <img src={Boyd} alt="Headshot" class="w-32 h-auto rounded-lg mt-auto mb-auto mx-auto m-1" />
       <div class="pt-2 text-center space-y-4">
         <h1 class="text-4xl  text-stone-200 m-1 ">｛Boyd Roberts｝</h1>
