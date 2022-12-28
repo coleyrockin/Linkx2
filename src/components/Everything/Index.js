@@ -33,15 +33,15 @@ function Everything() {
         <h2 class="flex justify-center text-xl text-stone-100">Full Stack | | Developer</h2>
         <div className='md:flex flex flex-col whitespace-pre'>
           <button>
-            <a className='text-stone-900 text-3xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden font-medium bg-gradient-to-tl from-blue-500 to-sky-300 hover:text-fuchsia-100 w-4/12  focus:outline-none px-5 py-2.5 rounded-md'
+            <a className='text-stone-900 text-3xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden font-medium bg-gradient-to-tl from-blue-700 to-sky-300 hover:text-fuchsia-100 w-4/12  focus:outline-none px-5 py-2.5 rounded-md'
               href="https://github.com/coleyrockin">Github <FaGithub /></a>
           </button>
           <button>
-            <a className='text-stone-900 text-3xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden font-medium bg-gradient-to-tr from-blue-500 to-sky-300 hover:text-fuchsia-100 w-4/12  focus:outline-none px-5 py-2.5 rounded-md'
+            <a className='text-stone-900 text-3xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden font-medium bg-gradient-to-tr from-blue-600 to-sky-300 hover:text-fuchsia-100 w-4/12  focus:outline-none px-5 py-2.5 rounded-md'
               href="https://coleyrockin.github.io/react-portfolio/">Portfolio <FaGlobe /></a>
           </button>
           <button>
-            <a className='text-stone-900 text-3xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden font-medium bg-gradient-to-bl from-blue-500 to-sky-300 hover:text-fuchsia-100 w-4/12  focus:outline-none px-5 py-2.5 rounded-md'
+            <a className='text-stone-900 text-3xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden font-medium bg-gradient-to-bl from-blue-600 to-sky-400 hover:text-fuchsia-100 w-4/12  focus:outline-none px-5 py-2.5 rounded-md'
               href="https://www.linkedin.com/in/boydcroberts/">Linkedin <FaLinkedin /></a>
           </button>
         </div>
