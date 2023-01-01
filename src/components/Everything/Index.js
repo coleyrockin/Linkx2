@@ -6,7 +6,8 @@ import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa';
 const TEXTS = [
   'Insert',
   'Clever',
-  'Things to say'
+  'Things to say',
+  'About Life and what not'
 
 ];
 
