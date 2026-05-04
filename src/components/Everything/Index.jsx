@@ -1,109 +1,121 @@
 import Boyd from "../../assets/imgs/Boydsuit.jpeg";
-import {
-  FaEnvelope,
-  FaExternalLinkAlt,
-  FaGithub,
-  FaGlobe,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
 
 const LINKS = [
   {
     label: "Portfolio",
-    subtitle: "Selected builds and recent frontend work",
+    subtitle: "Selected builds and recent frontend work.",
     href: "https://coleyrockin.github.io/react-portfolio/",
-    icon: FaGlobe,
-    accent: "#00c2a8",
     type: "Primary",
   },
   {
     label: "LinkedIn",
-    subtitle: "Professional profile and work history",
+    subtitle: "Professional profile and work history.",
     href: "https://www.linkedin.com/in/boydcroberts/",
-    icon: FaLinkedin,
-    accent: "#2867b2",
     type: "Profile",
   },
   {
     label: "GitHub",
-    subtitle: "Code, experiments, and shipped projects",
+    subtitle: "Source code, experiments, and shipped projects.",
     href: "https://github.com/coleyrockin",
-    icon: FaGithub,
-    accent: "#111111",
     type: "Code",
   },
   {
     label: "Instagram",
-    subtitle: "Creative updates and public work",
+    subtitle: "Creative updates and public work.",
     href: "https://www.instagram.com/coleyrockin/",
-    icon: FaInstagram,
-    accent: "#f04f7a",
     type: "Social",
   },
   {
     label: "Email",
-    subtitle: "Start a project or send an opportunity",
+    subtitle: "Start a project or send an opportunity.",
     href: "mailto:boydcroberts@gmail.com",
-    icon: FaEnvelope,
-    accent: "#f2b705",
     type: "Contact",
   },
 ];
 
+const ISSUE_DATE = new Date().toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "2-digit",
+});
+
 function Everything() {
   return (
-    <section className="linkx-layout" aria-labelledby="profile-title">
-      <div className="portrait-panel">
-        <img src={Boyd} alt="Boyd Roberts in a suit" className="profile-image" />
-        <div className="availability" aria-label="Availability status">
-          <span className="status-dot" />
-          Open to strong software opportunities
-        </div>
-      </div>
+    <section className="folio" aria-labelledby="folio-title">
+      <header className="masthead" aria-hidden="true">
+        <span className="masthead-cell masthead-edition">№ 02 · Vol. Twenty-Six</span>
+        <span className="masthead-cell masthead-title">Linkx</span>
+        <span className="masthead-cell masthead-date">{ISSUE_DATE}</span>
+      </header>
 
-      <div className="content-panel">
-        <p className="eyebrow">Linkx / Boyd Roberts</p>
-        <h1 id="profile-title" className="profile-name">
-          Full-stack developer building practical, polished web products.
-        </h1>
-        <p className="profile-copy">
-          React, JavaScript, product thinking, and clean UI engineering. Start with the portfolio,
-          then jump into code or professional history.
-        </p>
+      <div className="folio-grid">
+        <aside className="portrait" aria-label="Portrait of Boyd Roberts">
+          <div className="portrait-frame">
+            <span className="crop crop-tl" aria-hidden="true" />
+            <span className="crop crop-tr" aria-hidden="true" />
+            <span className="crop crop-bl" aria-hidden="true" />
+            <span className="crop crop-br" aria-hidden="true" />
+            <img src={Boyd} alt="Boyd Roberts in a suit" className="portrait-image" />
+          </div>
+          <figcaption className="portrait-caption">
+            <span className="caption-line">Boyd Roberts</span>
+            <span className="caption-meta">Full-Stack Developer · Texas</span>
+          </figcaption>
+        </aside>
 
-        <ul className="link-list" aria-label="Boyd Roberts links">
-          {LINKS.map((link, index) => {
-            const Icon = link.icon;
-            return (
-              <li
-                key={link.label}
-                className="link-item"
-                style={{
-                  "--accent": link.accent,
-                  animationDelay: `${index * 90}ms`,
-                }}
-              >
-                <a href={link.href} target="_blank" rel="noopener noreferrer" className="link-button">
-                  <span className="link-main">
-                    <span className="link-icon-wrap" aria-hidden="true">
-                      <Icon className="link-icon" />
-                    </span>
-                    <span>
-                      <span className="link-label">{link.label}</span>
-                      <span className="link-subtitle">{link.subtitle}</span>
-                    </span>
+        <article className="content">
+          <p className="kicker">
+            <span className="kicker-rule" aria-hidden="true" />
+            Personal Index
+          </p>
+
+          <h1 id="folio-title" className="display">
+            A directory of <em>work</em>, in&nbsp;five&nbsp;entries.
+          </h1>
+
+          <p className="lede">
+            React, JavaScript, product thinking, and clean UI engineering.
+            Start at the portfolio — then read the code or the résumé.
+          </p>
+
+          <p className="status">
+            <span className="status-dot" aria-hidden="true" />
+            Open to strong software opportunities
+          </p>
+
+          <ol className="entries" aria-label="Linked profiles and contact methods">
+            {LINKS.map((link, index) => (
+              <li key={link.label} className="entry" style={{ "--i": index }}>
+                <a
+                  className="entry-link"
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="entry-num" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="link-action">
-                    <span>{link.type}</span>
-                    <FaExternalLinkAlt className="external-icon" aria-hidden="true" />
+                  <span className="entry-body">
+                    <span className="entry-label">{link.label}</span>
+                    <span className="entry-leader" aria-hidden="true" />
+                    <span className="entry-tag">{link.type}</span>
                   </span>
+                  <span className="entry-arrow" aria-hidden="true">
+                    →
+                  </span>
+                  <span className="entry-desc">{link.subtitle}</span>
                 </a>
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ol>
+        </article>
       </div>
+
+      <footer className="colophon" aria-hidden="true">
+        <span>Set in Fraunces &amp; Work Sans</span>
+        <span className="colophon-mark">◆</span>
+        <span>Built with React + Vite · No tracking</span>
+      </footer>
     </section>
   );
 }
